@@ -1,0 +1,10 @@
+
+{
+    "name": "Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "bash ./.devcontainer/postCreate.sh",
+    "postStartCommand": "bash ./.devcontainer/postStart.sh",
+    "forwardPorts": [5432]
+}
