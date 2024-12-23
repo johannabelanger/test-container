@@ -1,3 +1,5 @@
+echo "Configuring node"
+mise use --global node@20
 echo "Configuring postgresql"
 service postgresql start
 service postgresql status
