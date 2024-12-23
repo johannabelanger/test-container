@@ -4,6 +4,11 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "customizations": {
+        "vscode": {
+            "extensions": ["bradlc.vscode-tailwindcss"]
+        }
+    },
     "postCreateCommand": "bash ./.devcontainer/postCreate.sh",
     "postStartCommand": "bash ./.devcontainer/postStart.sh",
     "forwardPorts": [5432]
