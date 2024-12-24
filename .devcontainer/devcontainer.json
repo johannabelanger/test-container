@@ -11,5 +11,5 @@
     },
     "postCreateCommand": "bash ./.devcontainer/postCreate.sh",
     "postStartCommand": "bash ./.devcontainer/postStart.sh",
-    "forwardPorts": [5432]
+    "forwardPorts": [5432, 3000, 5173]
 }

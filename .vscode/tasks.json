@@ -1,0 +1,40 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build API",
+            "type": "shell",
+            "command": "cd ./test-api && npm run start:dev",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": false
+            }
+        },
+        {
+            "label": "Build WebApp",
+            "type": "shell",
+            "command": "cd ./test-web-app && npm run dev",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "echo": false
+            }
+        },
+        {
+            "label": "Build All",
+            "dependsOn": [
+                "Build API",
+                "Build WebApp"
+            ],
+            "group": "build",
+            "runOptions": {
+                "runOn": "folderOpen" // This starts both tasks when the container is started
+            },
+        }
+    ]
+}
