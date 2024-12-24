@@ -6,7 +6,9 @@ service postgresql start
 service postgresql status
 HBA_FILE=$(su -c "psql -t -P format=unaligned -c 'show hba_file'" postgres)
 echo $HBA_FILE
-echo 'host all postgres 127.0.0.1/32 trust' | cat - $HBA_FILE > temp && mv temp $HBA_FILE
+echo 'local all postgres              trust' > temp
+echo 'host  all postgres 127.0.0.1/32 trust' >> temp
+cat $HBA_FILE >> temp && mv temp $HBA_FILE
 service postgresql stop
 service postgresql status
 echo "Configuring API project"
