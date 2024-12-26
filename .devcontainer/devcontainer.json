@@ -6,7 +6,10 @@
     },
     "customizations": {
         "vscode": {
-            "extensions": ["bradlc.vscode-tailwindcss"]
+            "extensions": [
+                "bradlc.vscode-tailwindcss",
+                "figma.figma-vscode-extension"
+            ]
         }
     },
     "postCreateCommand": "bash ./.devcontainer/postCreate.sh",
